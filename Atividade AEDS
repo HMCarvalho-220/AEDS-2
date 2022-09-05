@@ -1,24 +1,32 @@
-import java.util.Scanner;
 public class Aplicacao {
+	
+	public static void imprimir(int[] vet) {
+		System.out.println("Dados do vetor:");
+		for (int i = 0; i < vet.length; i++)
+		System.out.println("Posicao " + i + " --> " + vet[i]);
+
+		
+	}
+	
+	public static void mudar(int[] vet) {
+		for (int i = 0; i < vet.length; i++)
+			vet[i] = vet[i] * 5;
+	}
 
 	public static void main(String[] args) {
-		int a, b, c;
 		
-		Scanner sc = new Scanner(System.in);
+		int[] vetor;
 		
-		System.out.println("Digite o primeiro número:");
-		a = sc.nextInt();
-		System.out.println("Digite o segundo número:");
-		b = sc.nextInt();
+		vetor = new int[5];
 		
-		c = a + b;
+		for (int i = 0; i < vetor.length; i++)
+				vetor[i] = i;
+			
 		
-		if(c%2==0){
-			System.out.println("A soma é par: " + c);
-		}else {
-			System.out.println("A soma é ímpar: " + c);
-		}
-		
+				imprimir(vetor);
+				mudar(vetor);
+				imprimir(vetor);
+				
 
 	}
 
